@@ -15,17 +15,15 @@ Looking for: computational materials scientist and scientific machine-learning r
 
 Computational physicist (PhD) building physics-aware machine-learning surrogates for atomistic simulation. Six years of molecular dynamics and DFT on liquid and glassy metals, and six peer-reviewed papers (one Journal of Applied Physics Featured Article). Since 2026 she has run an end-to-end scientific AI workflow: fine-tuning the MACE-MPA-0 atomistic foundation model on a DFT dataset built for the purpose, deploying it in LAMMPS on multi-node A100 GPUs, and validating it against classical potentials and experiment. She owns the whole loop: data, training, validation, deployment and physics judgement.
 
-## Current project: Fine-tuning an atomistic foundation model for Mg-Ca metallic glasses
+## Current project: Fine-tuning the MACE foundation model for Mg-Ca metallic glasses
 
-With Prof. N. K. Bhatt, MK Bhavnagar University. June 2026 to present (in progress).
+Independent Researcher. Co-Investigator, PARAM Rudra GPU grant. 2026 to present.
 
-- Training-set design: a 2,000-geometry DFT set across four Mg-Ca compositions in crystal, liquid, supercooled and glassy states, labelled in two rounds so that round two targets the model's errors.
-- DFT convergence protocol: Quantum ESPRESSO settings converged on 18 cells with a worst-case criterion (40 Ry, dual 4, k-mesh rule by cell type), 270 calculations. Treating crystals and disordered cells separately saved about 1,100 CPU node-hours.
-- Workflow engineering: automated inputs, SLURM batching, provenance and collection. An in-job scheduler packs small calculations into the 10-node queue minimum, after 63% of billed time had been sitting idle.
-- GPU deployment and performance: LAMMPS with MACE (libtorch, Kokkos, CUDA 12.4) on A100 nodes, validated against ASE to numerical precision. 132,137 atom-steps/s per node at 96.4% weak-scaling efficiency on 8 nodes. One allocator setting doubled atoms per card and gave up to 3.3x throughput.
-- Profiling and debugging: Nsight Systems shows a long-tailed, data-movement-bound profile. Traced a multi-GPU segfault in the LAMMPS Kokkos ML-IAP path to host code dereferencing device memory, confirmed it in NVIDIA's container, and documented it for upstream.
-- Physics validation: zero-shot MACE reproduces the Mg-to-Ca icosahedral-centre ratio in the glass (3.3, against 5.6 from experiment), where the classical 2NN-MEAM potential gives 1.0.
-- Compute grant and reporting: PARAM Rudra (National Supercomputing Mission) A100 allocation as Co-Investigator, 2026. A million-atom run priced at 1,261 GPU node-hours from measured throughput. First-month report delivered to C-DAC.
+- Built a 2,000-structure DFT training set (Quantum ESPRESSO) spanning crystalline, liquid, supercooled and glassy Mg-Ca, with an active-learning round targeting the model's errors.
+- Designed the DFT convergence protocol and an automated SLURM workflow for hundreds of calculations, saving about 1,100 CPU node-hours.
+- Deployed MACE in LAMMPS on multi-node A100 GPUs (libtorch, Kokkos, CUDA), validated against ASE: 96% weak-scaling efficiency on 8 nodes and up to 3.3x throughput from memory tuning.
+- Profiled with Nsight Systems and traced a multi-GPU crash in the LAMMPS Kokkos ML-IAP interface to its root cause, documented for upstream.
+- Showed that zero-shot MACE captures glass local structure the classical 2NN-MEAM potential misses (Mg/Ca icosahedral-centre ratio 3.3 vs 1.0; experiment 5.6).
 
 ## Experience
 

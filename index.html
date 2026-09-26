@@ -287,8 +287,8 @@ header.hero + section { border-top: 0; }
       <div class="stats">
         <div class="stat"><b>6</b><span>peer-reviewed papers</span></div>
         <div class="stat"><b>6 yrs</b><span>MD and DFT on liquid and glassy metals</span></div>
-        <div class="stat"><b>96.4%</b><span>weak-scaling efficiency on 8 A100 nodes</span></div>
-        <div class="stat"><b>3.3&times;</b><span>throughput gain from one allocator setting</span></div>
+        <div class="stat"><b>96%</b><span>weak-scaling efficiency on 8 A100 nodes</span></div>
+        <div class="stat"><b>3.3&times;</b><span>throughput from GPU memory tuning</span></div>
       </div>
     </div>
   </section>
@@ -297,16 +297,14 @@ header.hero + section { border-top: 0; }
     <div class="wrap">
       <h2>Current project</h2>
       <article class="card">
-        <h3>Fine-tuning an atomistic foundation model for Mg-Ca metallic glasses</h3>
-        <p class="sub">With Prof. N. K. Bhatt, MK Bhavnagar University &middot; June 2026 to present (in progress)</p>
+        <h3>Fine-tuning the MACE foundation model for Mg-Ca metallic glasses</h3>
+        <p class="sub">Independent Researcher &middot; Co-I, PARAM Rudra GPU grant &middot; 2026 to present</p>
         <ul class="points">
-          <li><strong>Training-set design.</strong> A 2,000-geometry DFT set covering four Mg-Ca compositions in crystal, liquid, supercooled and glassy states. It was labelled in two rounds, with round two aimed at the model's errors.</li>
-          <li><strong>DFT convergence protocol.</strong> I converged Quantum ESPRESSO settings on 18 cells against a worst-case criterion (270 calculations). Treating crystals and disordered cells separately saved about 1,100 CPU node-hours.</li>
-          <li><strong>Workflow engineering.</strong> Inputs, SLURM batching, provenance and collection are all automated. An in-job scheduler packs small calculations into the 10-node queue minimum, after 63% of billed time had been sitting idle.</li>
-          <li><strong>GPU deployment.</strong> LAMMPS runs with MACE (libtorch, Kokkos, CUDA 12.4) on A100 nodes, validated against ASE to numerical precision. It reaches 132,137 atom-steps/s per node at 96.4% weak-scaling efficiency on 8 nodes.</li>
-          <li><strong>Profiling and debugging.</strong> Nsight Systems profiling shows a data-movement-bound profile. I traced a multi-GPU segfault in the LAMMPS Kokkos ML-IAP path to host code dereferencing device memory, and documented it for upstream.</li>
-          <li><strong>Physics validation.</strong> Zero-shot MACE reproduces the Mg-to-Ca icosahedral-centre ratio in the glass (3.3, against 5.6 from experiment). The classical 2NN-MEAM potential gives 1.0.</li>
-          <li><strong>Compute grant.</strong> Co-Investigator on a PARAM Rudra (National Supercomputing Mission) A100 allocation. A million-atom run is priced at 1,261 GPU node-hours from measured throughput.</li>
+          <li><strong>Training data.</strong> I built a 2,000-structure DFT training set (Quantum ESPRESSO) spanning crystalline, liquid, supercooled and glassy Mg-Ca, with an active-learning round aimed at the model's errors.</li>
+          <li><strong>DFT workflow.</strong> I designed the DFT convergence protocol and an automated SLURM workflow for hundreds of calculations, saving about 1,100 CPU node-hours.</li>
+          <li><strong>GPU deployment.</strong> MACE runs in LAMMPS on multi-node A100 GPUs (libtorch, Kokkos, CUDA), validated against ASE. It reaches 96% weak-scaling efficiency on 8 nodes, and memory tuning gave up to 3.3&times; throughput.</li>
+          <li><strong>Profiling and debugging.</strong> I profiled with Nsight Systems and traced a multi-GPU crash in the LAMMPS Kokkos ML-IAP interface to its root cause, documented for upstream.</li>
+          <li><strong>Physics validation.</strong> Zero-shot MACE captures glass local structure that the classical 2NN-MEAM potential misses: a Mg/Ca icosahedral-centre ratio of 3.3 against 1.0, with experiment at 5.6.</li>
         </ul>
       </article>
     </div>
