@@ -5,7 +5,7 @@
 Key facts:
 - Also known as: Anjali Shankar, A. Shankar, Anjali Shankarbhai Rameja
 - PhD, Physics (Computational Materials Science), Maharaja Krishnakumarsinhji (MK) Bhavnagar University, 2020 to 2026; supervisor Prof. N. K. Bhatt
-- Current project (independent researcher, 2026 to present): fine-tuning the MACE-MPA-0 foundation model for Mg-Ca metallic glasses (2,000-structure DFT training set; LAMMPS on multi-node A100 GPUs at 96% weak-scaling efficiency on 8 nodes)
+- Current project (independent researcher, 2026 to present): fine-tuning the MACE-MPA-0 foundation model for Mg-Ca metallic glasses (2,000-structure DFT training set; LAMMPS on multi-node A100 GPUs at 96% weak-scaling efficiency on 8 nodes; public model release expected November 2026)
 - Co-Investigator, PARAM Rudra A100 GPU allocation, National Supercomputing Mission (2026)
 - Journal of Applied Physics Featured Article (2024) on Mg-Ca/Al-Ca bulk metallic glasses for bone grafting
 - Contact: anjalirameja1993@gmail.com

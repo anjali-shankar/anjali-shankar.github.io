@@ -24,6 +24,7 @@ Independent Researcher. Co-Investigator, PARAM Rudra GPU grant. 2026 to present.
 - Deployed MACE in LAMMPS on multi-node A100 GPUs (libtorch, Kokkos, CUDA), validated against ASE: 96% weak-scaling efficiency on 8 nodes and up to 3.3x throughput from memory tuning.
 - Profiled with Nsight Systems and traced a multi-GPU crash in the LAMMPS Kokkos ML-IAP interface to its root cause, documented for upstream.
 - Showed that zero-shot MACE captures glass local structure the classical 2NN-MEAM potential misses (Mg/Ca icosahedral-centre ratio 3.3 vs 1.0; experiment 5.6).
+- Completion expected November 2026, with a public release of the fine-tuned MLIP; journal publication to follow.
 
 ## Experience
 
