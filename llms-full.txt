@@ -1,0 +1,91 @@
+# Anjali S Rameja, PhD: Full Profile
+
+> Computational physicist (PhD) building physics-aware machine-learning surrogates for atomistic simulation. Based in Bengaluru, Karnataka, India. Publishes under the author name "A. Shankar". Website: https://anjali-shankar.github.io/
+
+Also known as: Anjali Shankar, A. Shankar, Anjali Shankarbhai Rameja
+Title: Computational Physicist | Physics-Aware Machine Learning for Atomistic Simulation
+Location: Bengaluru, Karnataka, India
+Email: anjalirameja1993@gmail.com
+GitHub: https://github.com/anjali-shankar
+LinkedIn: https://www.linkedin.com/in/anjali-rameja/
+Google Scholar: https://scholar.google.com/citations?user=86g1wk4AAAAJ
+Looking for: computational materials scientist and scientific machine-learning roles, especially in Bengaluru (biomedical, semiconductor, energy storage, structural alloys, R&D centres)
+
+## Summary
+
+Computational physicist (PhD) building physics-aware machine-learning surrogates for atomistic simulation. Six years of molecular dynamics and DFT on liquid and glassy metals, and six peer-reviewed papers (one Journal of Applied Physics Featured Article). Since 2026 she has run an end-to-end scientific AI workflow: fine-tuning the MACE-MPA-0 atomistic foundation model on a DFT dataset built for the purpose, deploying it in LAMMPS on multi-node A100 GPUs, and validating it against classical potentials and experiment. She owns the whole loop: data, training, validation, deployment and physics judgement.
+
+## Current project: Fine-tuning an atomistic foundation model for Mg-Ca metallic glasses
+
+With Prof. N. K. Bhatt, MK Bhavnagar University. June 2026 to present (in progress).
+
+- Training-set design: a 2,000-geometry DFT set across four Mg-Ca compositions in crystal, liquid, supercooled and glassy states, labelled in two rounds so that round two targets the model's errors.
+- DFT convergence protocol: Quantum ESPRESSO settings converged on 18 cells with a worst-case criterion (40 Ry, dual 4, k-mesh rule by cell type), 270 calculations. Treating crystals and disordered cells separately saved about 1,100 CPU node-hours.
+- Workflow engineering: automated inputs, SLURM batching, provenance and collection. An in-job scheduler packs small calculations into the 10-node queue minimum, after 63% of billed time had been sitting idle.
+- GPU deployment and performance: LAMMPS with MACE (libtorch, Kokkos, CUDA 12.4) on A100 nodes, validated against ASE to numerical precision. 132,137 atom-steps/s per node at 96.4% weak-scaling efficiency on 8 nodes. One allocator setting doubled atoms per card and gave up to 3.3x throughput.
+- Profiling and debugging: Nsight Systems shows a long-tailed, data-movement-bound profile. Traced a multi-GPU segfault in the LAMMPS Kokkos ML-IAP path to host code dereferencing device memory, confirmed it in NVIDIA's container, and documented it for upstream.
+- Physics validation: zero-shot MACE reproduces the Mg-to-Ca icosahedral-centre ratio in the glass (3.3, against 5.6 from experiment), where the classical 2NN-MEAM potential gives 1.0.
+- Compute grant and reporting: PARAM Rudra (National Supercomputing Mission) A100 allocation as Co-Investigator, 2026. A million-atom run priced at 1,261 GPU node-hours from measured throughput. First-month report delivered to C-DAC.
+
+## Experience
+
+### Research Quality Specialist / Subject Matter Expert, Physics and Materials. Turing (Remote), June 2026 to present, 3 projects
+Writes and reviews paper-derived scientific coding tasks for frontier-lab clients across electrochemistry, Poisson-Boltzmann electrostatics, thermochemical equilibrium, rovibrational spectroscopy and solid-state chemistry, each with a reference solution, rubric and mutation-tested hidden test suite. Also builds agentic LAMMPS tool-use tasks scored on input decks and on RDF, MSD and convergence checks.
+
+### AI Trainer, Scientific Computing. Aligned (Remote), September 2026 to present
+Builds containerised terminal-bench style tasks (reference solution, hidden verifier) that test data triage and method choice, for example the sound speed of a binary liquid from six LAMMPS NPT runs of unequal quality.
+
+### AI Trainer, Physics. Handshake AI (Remote), September 2026 to present
+Writes adversarial multimodal physics tasks (a lab image plus an expert prompt) that current vision-language models fail for a nameable physical reason.
+
+### Doctoral Researcher, Computational Materials Science. Department of Physics, MK Bhavnagar University, February 2020 to January 2026
+Supervisor: Prof. N. K. Bhatt.
+- Large-scale LAMMPS molecular dynamics on Mg2Ca, Al2Ca, Al4Ca and Ca61Al39 (10,000 atoms, 300 to 1500 K, 2NN-MEAM), and on liquid W and Mo from melting to boiling point (2900 to 5800 K).
+- Property extraction: diffusion coefficients, viscosity, glass-transition temperatures, the full elastic suite, thermodynamic properties and structural descriptors (RDF, S(q), CNA) across glassy, supercooled and liquid regimes. Demonstrated Stokes-Einstein breakdown in supercooled metallic glasses.
+- Multi-fidelity cross-validation: Quantum ESPRESSO calculations on the crystalline phases (electronic structure, bonding) used to check MD-derived thermophysical properties against an ab-initio reference.
+- Analysis pipelines: reusable Python (NumPy, SciPy, Pandas) batch post-processing of multi-temperature trajectories: RDF, MSD, VACF, S(q), time-correlation functions (public repo: https://github.com/anjali-shankar/metallic-glass-md).
+- Application impact: established Mg-Ca metallic glasses as candidate biodegradable bone-grafting implants (JAP Featured Article).
+
+### Visiting Faculty and Lecturer, Physics. MK Bhavnagar University and affiliated colleges, 2015 to 2024
+Taught computational and condensed matter physics (MSc), supervised LAMMPS-based MD dissertations, and ran MD and visualisation workshops.
+
+## Publications (author name: A. Shankar)
+
+1. A. Shankar, N. K. Bhatt. "Atomic mass transport in binary metallic glasses: a case study of Mg2Ca, Al2Ca and Al4Ca." Journal of Physics: Condensed Matter 37, 355401 (2025). https://doi.org/10.1088/1361-648X/adfcac
+2. A. Shankar, N. K. Bhatt. "Enhanced mechanical and thermophysical properties of Mg2Ca, Al2Ca, and Al4Ca bulk metallic glasses in comparison to crystalline alloys for bone grafting applications." Journal of Applied Physics 136(3), 035107 (2024). Featured Article. https://pubs.aip.org/aip/jap/article/136/3/035107/3303611
+3. A. Shankar, N. K. Bhatt. "Bulk metallic glass Al2Ca from a biomedical application viewpoint: A molecular dynamics study." IOP Conference Series: Materials Science and Engineering 1291, 012026 (2023). https://doi.org/10.1088/1757-899X/1291/1/012026
+4. D. R. Gohil, A. Shankar, N. K. Bhatt. "Mass transport and thermal properties of liquid (melting to boiling point) tungsten: a molecular dynamics simulation." Physica Scripta 98, 115963 (2023). https://doi.org/10.1088/1402-4896/ad0269
+5. D. R. Gohil, A. Shankar, N. K. Bhatt. "Molecular Dynamics Simulations for Liquid Molybdenum: Structural and Atomic Transport Properties." Bulgarian Journal of Physics 50(4) (2023). https://www.bjp-bg.com/paper.php?id=1625
+6. A. Shankar, N. K. Bhatt, A. B. Patel, P. R. Vyas. "Amorphous structure of binary Ca61Al39 metallic glass close to transition temperature." AIP Conference Proceedings 2352, 020038 (2021).
+
+Key findings: glass-transition temperatures of 550 to 689 K for Mg2Ca, Al2Ca and Al4Ca glasses; better mechanical and thermophysical properties in the glassy state than in the crystalline alloys, supporting biodegradable bone-graft use; mass transport in binary BMGs explained with the Darken-Manning equation and free-volume theory using MD inputs.
+
+## Skills
+
+- Scientific machine learning: atomistic foundation models (MACE-MPA-0 fine-tuning), ML interatomic potentials as surrogates for DFT, training-set design, DFT labelling, active learning, validation against classical potentials and experiment, throughput/scaling/precision benchmarking.
+- Physics-based simulation: molecular dynamics in LAMMPS (2NN-MEAM, EAM, Stillinger-Weber, tight binding; 10,000-atom systems, 300 to 5800 K); density functional theory in Quantum ESPRESSO (USPP, convergence protocols); ASE for structure building and workflows.
+- HPC and deployment: SLURM; multi-node A100 GPU cluster (PARAM Rudra, NSM); Nsight Systems profiling; GPU builds of LAMMPS + libtorch + Kokkos + CUDA 12.4; NVIDIA NGC containers; MPI (OpenMPI, srun pmix); Linux, bash, job orchestration for hundreds of runs.
+- Programming: Python (NumPy, SciPy, Pandas, ASE), PyTorch (MACE training and inference stack), Git.
+- Modeling and analysis: statistical mechanics and mathematical modeling; liquid-state theory; Green-Kubo and Stokes-Einstein transport (diffusion, viscosity); structure and phase transitions (glass transition, RDF, CNA, Voronoi); time-correlation functions; thermophysical and mechanical properties.
+- AI training and evaluation: scientific coding, agentic terminal and multimodal physics tasks; rubrics and hidden test suites (Turing, Aligned, Handshake AI, 2026).
+
+## Education
+
+- PhD, Physics (Computational Materials Science), MK Bhavnagar University, Gujarat, 2020 to 2026
+- MSc, Physics (Condensed Matter), Sardar Patel University, Gujarat, 2013 to 2015
+- BSc, Physics (ranked 3rd in cohort), Sir P. P. Institute of Science, Gujarat, 2010 to 2013
+
+## Achievements
+
+- PARAM Rudra GPU allocation (National Supercomputing Mission), Co-Investigator, 2026
+- 1st Prize, Oral Presentation, National Conference at IITE, Gandhinagar, 2022
+- 2nd Prize, Poster Presentation, National Science Symposium, Govt. Science College, Gariyadhar, 2024
+
+## Workshops and conferences
+
+- Young Researchers' Workshop on Machine Learning for Materials, ICTP, 2022
+- 16th International Conference on Creep and Fracture of Engineering Materials and Structures, IISc, 2024
+- Molecular Dynamics Simulations in Materials Science and Engineering, IIT Kharagpur, 2021
+- Computational Physics and Materials Science: Total Energy and Force Methods, ICTP, 2021
+- Introduction to Glass Science and Technology, IIT Kharagpur, 2020
+- 9 conference presentations (2020 to 2024)

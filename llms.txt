@@ -1,0 +1,33 @@
+# Anjali S Rameja, PhD
+
+> Computational physicist in Bengaluru, India, building physics-aware machine-learning surrogates for atomistic simulation. Six years of molecular dynamics (LAMMPS) and density functional theory (Quantum ESPRESSO) on liquid and glassy metals, six peer-reviewed papers, and since 2026 an end-to-end workflow fine-tuning the MACE-MPA-0 atomistic foundation model and deploying it on multi-node A100 GPUs. Publishes under the author name "A. Shankar". Open to computational materials scientist and scientific ML roles.
+
+Key facts:
+- Also known as: Anjali Shankar, A. Shankar, Anjali Shankarbhai Rameja
+- PhD, Physics (Computational Materials Science), Maharaja Krishnakumarsinhji (MK) Bhavnagar University, 2020 to 2026; supervisor Prof. N. K. Bhatt
+- Current project: fine-tuning MACE-MPA-0 for Mg-Ca metallic glasses (2,000-geometry DFT training set; 132,137 atom-steps/s per A100 node at 96.4% weak-scaling efficiency on 8 nodes)
+- Co-Investigator, PARAM Rudra A100 GPU allocation, National Supercomputing Mission (2026)
+- Journal of Applied Physics Featured Article (2024) on Mg-Ca/Al-Ca bulk metallic glasses for bone grafting
+- Contact: anjalirameja1993@gmail.com
+
+## Profile
+
+- [Home page](https://anjali-shankar.github.io/): overview, current project, experience, publications, skills
+- [Full profile for LLMs](https://anjali-shankar.github.io/llms-full.txt): complete CV as plain text
+- [CV (PDF)](https://anjali-shankar.github.io/Anjali_S_Rameja_CV.pdf): two-page CV
+
+## Publications
+
+- [Atomic mass transport in binary metallic glasses: a case study of Mg2Ca, Al2Ca and Al4Ca](https://iopscience.iop.org/article/10.1088/1361-648X/adfcac/meta): J. Phys.: Condens. Matter 37, 355401 (2025)
+- [Enhanced mechanical and thermophysical properties of Mg2Ca, Al2Ca, and Al4Ca bulk metallic glasses ... for bone grafting applications](https://pubs.aip.org/aip/jap/article/136/3/035107/3303611): J. Appl. Phys. 136, 035107 (2024), Featured Article
+- [Mass transport and thermal properties of liquid (melting to boiling point) tungsten](https://iopscience.iop.org/article/10.1088/1402-4896/ad0269/meta): Physica Scripta 98, 115963 (2023)
+- [Google Scholar profile](https://scholar.google.com/citations?user=86g1wk4AAAAJ): full publication list and citations
+
+## Code
+
+- [metallic-glass-md](https://github.com/anjali-shankar/metallic-glass-md): LAMMPS inputs and Python analysis (RDF, S(q), Green-Kubo diffusion, VDOS) for Mg-Ca and Al-Ca bulk metallic glasses
+
+## Elsewhere
+
+- [GitHub](https://github.com/anjali-shankar)
+- [LinkedIn](https://www.linkedin.com/in/anjali-rameja/)
